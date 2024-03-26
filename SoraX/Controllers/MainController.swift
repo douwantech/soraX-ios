@@ -65,14 +65,20 @@ class MainController: UITabBarController {
         myNav.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 3, vertical: 7)
         vcs.append(myNav)
         
-        tabBar.backgroundColor = UIColor(hexString: "#FAFAFA")
         self.viewControllers = vcs
-        tabBar.barTintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
-        tabBar.layer.shadowColor = UIColor(red: 0.847, green: 0.847, blue: 0.847, alpha: 1).cgColor
-        tabBar.layer.shadowOffset = CGSize(width: 0, height: -0.5)
-        tabBar.layer.shadowRadius = 0
-        tabBar.layer.shadowOpacity = 1
+        tabBar.isHidden = true
+        
+        let window = UIApplication.shared.windows.first
+            let bottomPadding = window?.safeAreaInsets.bottom ?? 0
+        let customTabBar = CustomTabBar(frame: CGRect(x: 11, y: H.winHeight() - bottomPadding - 10 - 59, width: H.winWidth() - 22, height: 59))
+        customTabBar.delegate = self
+        view.addSubview(customTabBar)
     }
 
 }
 
+extension MainController: CustomTabBarDelegate {
+    func switchTabBar(index: Int) {
+        selectedIndex = index
+    }
+}

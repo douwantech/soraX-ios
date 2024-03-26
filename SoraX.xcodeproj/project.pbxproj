@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		49D366582BB2699700699514 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D366572BB2699700699514 /* NavigationController.swift */; };
+		49D3665B2BB2740C00699514 /* Guide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D3665A2BB2740C00699514 /* Guide.storyboard */; };
+		49D3665F2BB2743700699514 /* GuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3665E2BB2743700699514 /* GuideController.swift */; };
+		49D366612BB2B1D500699514 /* CustomTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49D366602BB2B1D500699514 /* CustomTabBar.xib */; };
+		49D366632BB2B25400699514 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D366622BB2B25400699514 /* CustomTabBar.swift */; };
+		49D366662BB2BB2900699514 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D366652BB2BB2900699514 /* GradientLabel.swift */; };
 		49FCF59C2BB17138000FC4CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCF59B2BB17138000FC4CF /* AppDelegate.swift */; };
 		49FCF59E2BB17138000FC4CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCF59D2BB17138000FC4CF /* SceneDelegate.swift */; };
 		49FCF5A02BB17138000FC4CF /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCF59F2BB17138000FC4CF /* MainController.swift */; };
@@ -48,6 +53,11 @@
 /* Begin PBXFileReference section */
 		0D71EB81CCA096A6CC30F882 /* Pods_SoraX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoraX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D366572BB2699700699514 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		49D3665A2BB2740C00699514 /* Guide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Guide.storyboard; sourceTree = "<group>"; };
+		49D3665E2BB2743700699514 /* GuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideController.swift; sourceTree = "<group>"; };
+		49D366602BB2B1D500699514 /* CustomTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTabBar.xib; sourceTree = "<group>"; };
+		49D366622BB2B25400699514 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		49D366652BB2BB2900699514 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		49FCF5982BB17138000FC4CF /* SoraX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoraX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49FCF59B2BB17138000FC4CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49FCF59D2BB17138000FC4CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +126,32 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		49D366592BB273FC00699514 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				49D3665A2BB2740C00699514 /* Guide.storyboard */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		49D3665D2BB2741C00699514 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				49D3665E2BB2743700699514 /* GuideController.swift */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		49D366642BB2BB1B00699514 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				49D366622BB2B25400699514 /* CustomTabBar.swift */,
+				49D366602BB2B1D500699514 /* CustomTabBar.xib */,
+				49D366652BB2BB2900699514 /* GradientLabel.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		49FCF58F2BB17138000FC4CF = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +192,7 @@
 			children = (
 				49FCF59F2BB17138000FC4CF /* MainController.swift */,
 				49D366562BB2696100699514 /* Common */,
+				49D3665D2BB2741C00699514 /* Guide */,
 				49FCF5B02BB18C5F000FC4CF /* Explore */,
 				49FCF5B12BB18C69000FC4CF /* Generate */,
 				49FCF5B22BB18C75000FC4CF /* Records */,
@@ -190,7 +227,9 @@
 		49FCF5B92BB18CB4000FC4CF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				49D366642BB2BB1B00699514 /* Common */,
 				49FCF5A12BB17138000FC4CF /* Main.storyboard */,
+				49D366592BB273FC00699514 /* Guide */,
 				49FCF5BB2BB18CD7000FC4CF /* Explore */,
 				49FCF5BC2BB18CE0000FC4CF /* Generate */,
 				49FCF5BD2BB18CE7000FC4CF /* Records */,
@@ -358,10 +397,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49D366612BB2B1D500699514 /* CustomTabBar.xib in Resources */,
 				49FCF5BF2BB18D03000FC4CF /* Explore.storyboard in Resources */,
 				49FCF5C32BB18D13000FC4CF /* Records.storyboard in Resources */,
 				49FCF5A82BB17139000FC4CF /* LaunchScreen.storyboard in Resources */,
 				49FCF5A52BB17139000FC4CF /* Assets.xcassets in Resources */,
+				49D3665B2BB2740C00699514 /* Guide.storyboard in Resources */,
 				49FCF5A32BB17138000FC4CF /* Main.storyboard in Resources */,
 				49FCF5C12BB18D0C000FC4CF /* Generate.storyboard in Resources */,
 			);
@@ -421,6 +462,7 @@
 				49FCF5F22BB18F94000FC4CF /* NibOwnerLoadable.swift in Sources */,
 				49FCF5A02BB17138000FC4CF /* MainController.swift in Sources */,
 				49FCF5DC2BB18ECF000FC4CF /* DataManager.swift in Sources */,
+				49D366662BB2BB2900699514 /* GradientLabel.swift in Sources */,
 				49FCF5DD2BB18ECF000FC4CF /* BaseRequest.swift in Sources */,
 				49FCF5F32BB18F94000FC4CF /* UserDefaultUtils.swift in Sources */,
 				49FCF5E12BB18ECF000FC4CF /* MyError.swift in Sources */,
@@ -429,6 +471,7 @@
 				49FCF5E02BB18ECF000FC4CF /* APIConst.swift in Sources */,
 				49FCF5F92BB18F94000FC4CF /* Extension.swift in Sources */,
 				49FCF5FA2BB18F94000FC4CF /* FixLayout.swift in Sources */,
+				49D366632BB2B25400699514 /* CustomTabBar.swift in Sources */,
 				49FCF5E52BB18F41000FC4CF /* User.swift in Sources */,
 				49FCF5DE2BB18ECF000FC4CF /* RequestResult.swift in Sources */,
 				49FCF5D62BB18ECF000FC4CF /* DataProvider.swift in Sources */,
@@ -438,6 +481,7 @@
 				49FCF5FC2BB18F94000FC4CF /* SwiftyJSON.swift in Sources */,
 				49FCF5F82BB18F94000FC4CF /* StoryboardLoadable.swift in Sources */,
 				49FCF5DB2BB18ECF000FC4CF /* NetworkDataProvider.swift in Sources */,
+				49D3665F2BB2743700699514 /* GuideController.swift in Sources */,
 				49D366582BB2699700699514 /* NavigationController.swift in Sources */,
 				49FCF59E2BB17138000FC4CF /* SceneDelegate.swift in Sources */,
 				49FCF5F52BB18F94000FC4CF /* SectionInterface.swift in Sources */,

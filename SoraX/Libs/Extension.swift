@@ -225,3 +225,21 @@ extension UIViewController {
         return storyboard.instantiateViewController(withIdentifier: viewControllerIdentifier) as! Self
     }
 }
+
+extension UIColor {
+    static func custom(_ name: ColorName) -> UIColor {
+        StyleManager.colorByName(name)
+    }
+}
+
+extension UIView {
+    /// 给 UIView 添加点击事件
+    /// - Parameters:
+    ///   - target: 事件的接收者
+    ///   - action: 事件触发时执行的方法
+    func addTapGestureRecognizer(target: Any, action: Selector) {
+        let tapGesture = UITapGestureRecognizer(target: target, action: action)
+        self.isUserInteractionEnabled = true
+        self.addGestureRecognizer(tapGesture)
+    }
+}
