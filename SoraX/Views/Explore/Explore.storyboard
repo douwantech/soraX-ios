@@ -16,9 +16,54 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VeR-xN-sP0">
+                                <rect key="frame" x="0.0" y="73" width="393" height="44"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explore_logo" translatesAutoresizingMaskIntoConstraints="NO" id="kL7-kk-Auo">
+                                        <rect key="frame" x="21" y="4" width="163" height="36"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="1To-5h-kyU">
+                                        <rect key="frame" x="264" y="4" width="119" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuY-iQ-61b">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="36"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="member"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhW-JQ-wjw">
+                                                <rect key="frame" x="83" y="0.0" width="36" height="36"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="explore_setting"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="X5T-rj-9VC"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="0.0" left="21" bottom="0.0" right="10"/>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="b94-6r-Loi">
+                                <rect key="frame" x="0.0" y="127" width="393" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="b94-6r-Loi" secondAttribute="trailing" id="7n4-Oh-cNV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VeR-xN-sP0" secondAttribute="trailing" id="9FG-ZI-S71"/>
+                            <constraint firstItem="b94-6r-Loi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="AVT-xr-m2Q"/>
+                            <constraint firstItem="b94-6r-Loi" firstAttribute="top" secondItem="VeR-xN-sP0" secondAttribute="bottom" constant="10" id="Dnh-Po-mWM"/>
+                            <constraint firstAttribute="bottom" secondItem="b94-6r-Loi" secondAttribute="bottom" id="ESy-RB-B9F"/>
+                            <constraint firstItem="VeR-xN-sP0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="P16-0G-qsk"/>
+                            <constraint firstItem="VeR-xN-sP0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="14" id="Uj4-cQ-g93"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="vTable" destination="b94-6r-Loi" id="dg9-BZ-euO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,8 +71,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="explore_logo" width="163" height="36"/>
+        <image name="explore_setting" width="36" height="36"/>
+        <image name="member" width="64" height="36"/>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

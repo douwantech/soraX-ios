@@ -23,7 +23,7 @@ enum FontName: String {
 }
 
 enum ColorName {
-    case black, white, darkGrey, segumen, price, cancel, black85, black45, black15
+    case black, white, darkGrey, segumen, price, cancel, black85, black45, black15, greenDD
 
     func toUIColor() -> UIColor {
         switch self {
@@ -45,6 +45,8 @@ enum ColorName {
             return UIColor(red: 0, green: 0, blue: 0, alpha: 0.45)
         case .black15:
             return UIColor(hexString: "#151518")
+        case .greenDD:
+            return UIColor(hexString: "#DDFFC5")
         }
     }
 }

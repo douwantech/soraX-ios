@@ -54,11 +54,11 @@ class CustomTabBar: UIStackView, NibOwnerLoadable {
     
     func updateUI(with tag: Int) {
         vExploreImg.image = UIImage(named: "tabbar_explore_" + (tag == 0 ? "on" : "off"))
-        vExploreTitle.textColor = tag == 0 ? .black : .gray
+        vExploreTitle.textColor = tag == 0 ? .custom(.greenDD) : .gray
         vMakeImg.image = UIImage(named: "tabbar_make_" + (tag == 1 ? "on" : "off"))
-        vMakeTitle.textColor = tag == 1 ? .black : .gray
+        vMakeTitle.textColor = tag == 1 ? .custom(.greenDD) : .gray
         vRecordImg.image = UIImage(named: "tabbar_record_" + (tag == 2 ? "on" : "off"))
-        vRecordTitle.textColor = tag == 2 ? .black : .gray
+        vRecordTitle.textColor = tag == 2 ? .custom(.greenDD) : .gray
     }
 }
 

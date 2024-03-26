@@ -27,43 +27,16 @@ class MainController: UITabBarController {
         ]
         
         let ExploreVc = ExploreController.createFromStoryboard(storyboard: "Explore")
-        let homeNav = NavigationController(rootViewController: ExploreVc)
-        homeNav.tabBarItem.title = H.t("探索")
-        homeNav.tabBarItem.setTitleTextAttributes(normalTextAttributes, for: .normal)
-        homeNav.tabBarItem.setTitleTextAttributes(selectedTextAttributes, for: .selected)
-        let createImage = UIImage(named: "tabbar_home_normal")?.withRenderingMode(.alwaysOriginal)
-        let createSelectedImage = UIImage(named: "tabbar_home_select")?.withRenderingMode(.alwaysOriginal)
-        homeNav.tabBarItem.image = createImage
-        homeNav.tabBarItem.selectedImage = createSelectedImage
-        homeNav.tabBarItem.imageInsets = UIEdgeInsets.init(top: 9, left: -0.5, bottom: -9, right: 0.5)
-        homeNav.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: -2, vertical: 7)
-        vcs.append(homeNav)
+        let ExploreNav = NavigationController(rootViewController: ExploreVc)
+        vcs.append(ExploreNav)
         
-        let GenerateVc = GenerateController.createFromStoryboard(storyboard: "Generate")
-        let toolNav = NavigationController(rootViewController: GenerateVc)
-        toolNav.tabBarItem.title = H.t("生成")
-        toolNav.tabBarItem.setTitleTextAttributes(normalTextAttributes, for: .normal)
-        toolNav.tabBarItem.setTitleTextAttributes(selectedTextAttributes, for: .selected)
-        let searchImage = UIImage(named: "tabbar_tool_normal")?.withRenderingMode(.alwaysOriginal)
-        let searchSelectedImage = UIImage(named: "tabbar_tool_select")?.withRenderingMode(.alwaysOriginal)
-        toolNav.tabBarItem.image = searchImage
-        toolNav.tabBarItem.selectedImage = searchSelectedImage
-        toolNav.tabBarItem.imageInsets = UIEdgeInsets.init(top: 9, left: -0.5, bottom: -9, right: 0.5)
-        toolNav.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0.5, vertical: 7)
-        vcs.append(toolNav)
+        let MakeVc = MakeController.createFromStoryboard(storyboard: "Make")
+        let MakeNav = NavigationController(rootViewController: MakeVc)
+        vcs.append(MakeNav)
         
         let recordsVc = RecordsController.createFromStoryboard(storyboard: "Records")
-        let myNav = NavigationController(rootViewController: recordsVc)
-        myNav.tabBarItem.title = H.t("历史记录")
-        myNav.tabBarItem.setTitleTextAttributes(normalTextAttributes, for: .normal)
-        myNav.tabBarItem.setTitleTextAttributes(selectedTextAttributes, for: .selected)
-        let myImage = UIImage(named: "tabbar_my_normal")?.withRenderingMode(.alwaysOriginal)
-        let mySelectedImage = UIImage(named: "tabbar_my_select")?.withRenderingMode(.alwaysOriginal)
-        myNav.tabBarItem.image = myImage
-        myNav.tabBarItem.selectedImage = mySelectedImage
-        myNav.tabBarItem.imageInsets = UIEdgeInsets.init(top: 9, left: -0.5, bottom: -9, right: 0.5)
-        myNav.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 3, vertical: 7)
-        vcs.append(myNav)
+        let recordsNav = NavigationController(rootViewController: recordsVc)
+        vcs.append(recordsNav)
         
         self.viewControllers = vcs
         tabBar.isHidden = true
