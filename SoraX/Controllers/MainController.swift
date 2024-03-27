@@ -9,10 +9,12 @@ import UIKit
 import Alamofire
 
 class MainController: UITabBarController {
-
+    
+    var customTabBar: CustomTabBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         var vcs :[UIViewController] = []
         let normalFont = UIFont(name: FontName.pfr.rawValue, size: 12)
         let selectFont = UIFont(name: FontName.pfb.rawValue, size: 12)
@@ -42,12 +44,12 @@ class MainController: UITabBarController {
         tabBar.isHidden = true
         
         let window = UIApplication.shared.windows.first
-            let bottomPadding = window?.safeAreaInsets.bottom ?? 0
-        let customTabBar = CustomTabBar(frame: CGRect(x: 11, y: H.winHeight() - bottomPadding - 10 - 59, width: H.winWidth() - 22, height: 59))
+        let bottomPadding = window?.safeAreaInsets.bottom ?? 0
+        customTabBar = CustomTabBar(frame: CGRect(x: 11, y: H.winHeight() - bottomPadding - 10 - 59, width: H.winWidth() - 22, height: 59))
         customTabBar.delegate = self
         view.addSubview(customTabBar)
     }
-
+    
 }
 
 extension MainController: CustomTabBarDelegate {

@@ -37,7 +37,8 @@ extension ExploreController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let vc = ExploreDetailController.createFromStoryboard(storyboard: "Explore")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
