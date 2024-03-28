@@ -10,6 +10,10 @@
 		499753952BB2C7A4003AFFBB /* ExploreCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499753932BB2C7A4003AFFBB /* ExploreCategoryCell.swift */; };
 		499753962BB2C7A4003AFFBB /* ExploreCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499753942BB2C7A4003AFFBB /* ExploreCategoryCell.xib */; };
 		499753982BB3BDB2003AFFBB /* ExploreDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499753972BB3BDB2003AFFBB /* ExploreDetailController.swift */; };
+		4997539B2BB549AA003AFFBB /* MakeStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499753992BB549AA003AFFBB /* MakeStyleCell.swift */; };
+		4997539F2BB549B8003AFFBB /* MakePromptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997539D2BB549B8003AFFBB /* MakePromptCell.swift */; };
+		499753A02BB549B8003AFFBB /* MakePromptCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4997539E2BB549B8003AFFBB /* MakePromptCell.xib */; };
+		499753A22BB555FA003AFFBB /* MakeStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499753A12BB555FA003AFFBB /* MakeStyleCell.xib */; };
 		49D366582BB2699700699514 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D366572BB2699700699514 /* NavigationController.swift */; };
 		49D3665B2BB2740C00699514 /* Guide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D3665A2BB2740C00699514 /* Guide.storyboard */; };
 		49D3665F2BB2743700699514 /* GuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3665E2BB2743700699514 /* GuideController.swift */; };
@@ -58,6 +62,10 @@
 		499753932BB2C7A4003AFFBB /* ExploreCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCategoryCell.swift; sourceTree = "<group>"; };
 		499753942BB2C7A4003AFFBB /* ExploreCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreCategoryCell.xib; sourceTree = "<group>"; };
 		499753972BB3BDB2003AFFBB /* ExploreDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreDetailController.swift; sourceTree = "<group>"; };
+		499753992BB549AA003AFFBB /* MakeStyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStyleCell.swift; sourceTree = "<group>"; };
+		4997539D2BB549B8003AFFBB /* MakePromptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePromptCell.swift; sourceTree = "<group>"; };
+		4997539E2BB549B8003AFFBB /* MakePromptCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakePromptCell.xib; sourceTree = "<group>"; };
+		499753A12BB555FA003AFFBB /* MakeStyleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeStyleCell.xib; sourceTree = "<group>"; };
 		49D366572BB2699700699514 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		49D3665A2BB2740C00699514 /* Guide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Guide.storyboard; sourceTree = "<group>"; };
 		49D3665E2BB2743700699514 /* GuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideController.swift; sourceTree = "<group>"; };
@@ -275,6 +283,10 @@
 			isa = PBXGroup;
 			children = (
 				49FCF5C02BB18D0C000FC4CF /* Make.storyboard */,
+				499753992BB549AA003AFFBB /* MakeStyleCell.swift */,
+				499753A12BB555FA003AFFBB /* MakeStyleCell.xib */,
+				4997539D2BB549B8003AFFBB /* MakePromptCell.swift */,
+				4997539E2BB549B8003AFFBB /* MakePromptCell.xib */,
 			);
 			path = Make;
 			sourceTree = "<group>";
@@ -410,11 +422,13 @@
 				499753962BB2C7A4003AFFBB /* ExploreCategoryCell.xib in Resources */,
 				49FCF5BF2BB18D03000FC4CF /* Explore.storyboard in Resources */,
 				49FCF5C32BB18D13000FC4CF /* Records.storyboard in Resources */,
+				499753A02BB549B8003AFFBB /* MakePromptCell.xib in Resources */,
 				49FCF5A82BB17139000FC4CF /* LaunchScreen.storyboard in Resources */,
 				49FCF5A52BB17139000FC4CF /* Assets.xcassets in Resources */,
 				49D3665B2BB2740C00699514 /* Guide.storyboard in Resources */,
 				49FCF5A32BB17138000FC4CF /* Main.storyboard in Resources */,
 				49FCF5C12BB18D0C000FC4CF /* Make.storyboard in Resources */,
+				499753A22BB555FA003AFFBB /* MakeStyleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +494,9 @@
 				49FCF5E22BB18ECF000FC4CF /* JsonRequest.swift in Sources */,
 				49FCF5FB2BB18F94000FC4CF /* H.swift in Sources */,
 				49FCF5E02BB18ECF000FC4CF /* APIConst.swift in Sources */,
+				4997539B2BB549AA003AFFBB /* MakeStyleCell.swift in Sources */,
 				49FCF5F92BB18F94000FC4CF /* Extension.swift in Sources */,
+				4997539F2BB549B8003AFFBB /* MakePromptCell.swift in Sources */,
 				49FCF5FA2BB18F94000FC4CF /* FixLayout.swift in Sources */,
 				49D366632BB2B25400699514 /* CustomTabBar.swift in Sources */,
 				49FCF5E52BB18F41000FC4CF /* User.swift in Sources */,

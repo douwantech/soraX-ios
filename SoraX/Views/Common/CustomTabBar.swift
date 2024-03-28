@@ -21,7 +21,7 @@ class CustomTabBar: UIStackView, NibOwnerLoadable {
     @IBOutlet weak var vRecordStack: UIStackView!
     @IBOutlet weak var vRecordImg :UIImageView!
     @IBOutlet weak var vRecordTitle :UILabel!
-
+    
     weak var delegate: CustomTabBarDelegate?
     
     override init(frame: CGRect) {
@@ -44,6 +44,14 @@ class CustomTabBar: UIStackView, NibOwnerLoadable {
         vMakeStack.addTapGestureRecognizer(target: self, action: #selector(handleTapItem(_ :)))
         vRecordStack.addTapGestureRecognizer(target: self, action: #selector(handleTapItem(_ :)))
         updateUI(with: 0)
+//        let blurEffect = UIBlurEffect(style: .light)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = self.bounds.insetBy(dx: 1, dy: 1)
+//        blurEffectView.layer.cornerRadius = (bounds.height / 2) - 1
+//        blurEffectView.clipsToBounds = true
+//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        self.addSubview(blurEffectView)
+//        sendSubviewToBack(blurEffectView)
     }
     
     @objc func handleTapItem(_ recognizer: UITapGestureRecognizer) {

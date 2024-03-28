@@ -18,15 +18,7 @@ class MainController: UITabBarController {
         var vcs :[UIViewController] = []
         let normalFont = UIFont(name: FontName.pfr.rawValue, size: 12)
         let selectFont = UIFont(name: FontName.pfb.rawValue, size: 12)
-        let normalTextAttributes: [NSAttributedString.Key: Any] = [
-            //            NSAttributedString.Key.foregroundColor: UIColor(hexString: "#5A5A65"),
-            NSAttributedString.Key.font: normalFont as Any
-        ]
-        
-        let selectedTextAttributes: [NSAttributedString.Key: Any] = [
-            NSAttributedString.Key.font: selectFont as Any,
-            NSAttributedString.Key.foregroundColor: UIColor(hexString: "#151323")
-        ]
+
         
         let ExploreVc = ExploreController.createFromStoryboard(storyboard: "Explore")
         let ExploreNav = NavigationController(rootViewController: ExploreVc)

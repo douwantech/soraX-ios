@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecordsController: UIViewController {
+class RecordsController: UIViewController, HideNavigationBarProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()

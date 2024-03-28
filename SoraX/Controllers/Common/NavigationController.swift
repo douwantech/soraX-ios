@@ -32,16 +32,17 @@ class NavigationController: UINavigationController {
         app.shadowColor = .clear
         navigationBar.scrollEdgeAppearance = app
         navigationBar.standardAppearance = app
-//        if #available(iOS 15.0, *) {
-//            let app = UINavigationBarAppearance()
-//            app.configureWithOpaqueBackground()  // 重置背景和阴影颜色
-//            app.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.init(name: "Gilroy-SemiBold", size: 18)!]
-//            app.backgroundColor = .white// 设置导航栏背景色
-//            app.shadowColor = .clear
-//            app.backgroundEffect = nil
-//            UINavigationBar.appearance().scrollEdgeAppearance = app
-//            UINavigationBar.appearance().standardAppearance = app
-//        }
+        if #available(iOS 15.0, *) {
+            let app = UINavigationBarAppearance()
+            app.configureWithOpaqueBackground()  // 重置背景和阴影颜色
+            app.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: StyleManager.fontByName(.pfb, size: 18)]
+            app.backgroundColor = .white// 设置导航栏背景色
+            app.shadowColor = .clear
+            app.backgroundEffect = nil
+            UINavigationBar.appearance().scrollEdgeAppearance = app
+            UINavigationBar.appearance().standardAppearance = app
+        }
+        delegate = self
 
     }
     

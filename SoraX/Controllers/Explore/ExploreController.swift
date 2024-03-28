@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExploreController: UIViewController {
+class ExploreController: UIViewController, HideNavigationBarProtocol {
     @IBOutlet weak var vTable: UITableView!
 
     override func viewDidLoad() {

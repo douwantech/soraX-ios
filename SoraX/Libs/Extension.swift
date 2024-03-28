@@ -64,7 +64,7 @@ extension UILabel {
     func setTailText(_ text: String?, style: StyleName) {
         self.attributedText = StyleManager.attributeTailText(text: text ?? "", name: style)
     }
-
+    
     func setText(_ text: String?, style: StyleName) {
         self.attributedText = StyleManager.attributeText(text: text ?? "", name: style)
     }
@@ -132,9 +132,9 @@ extension Collection {
 }
 
 extension UINavigationController {
-   open override var preferredStatusBarStyle: UIStatusBarStyle {
-      return topViewController?.preferredStatusBarStyle ?? .default
-   }
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return topViewController?.preferredStatusBarStyle ?? .default
+    }
 }
 
 extension UIButton {
@@ -156,11 +156,11 @@ extension UIButton {
     
     func setGradientLayer(startColor: UIColor, endColor: UIColor, startPoint : CGPoint, endPoint: CGPoint){
         let caGradientLayer:CAGradientLayer = CAGradientLayer()
-          caGradientLayer.colors = [startColor.cgColor, endColor.cgColor]
+        caGradientLayer.colors = [startColor.cgColor, endColor.cgColor]
         caGradientLayer.locations = [0, 1]
-                caGradientLayer.startPoint = startPoint
-                caGradientLayer.endPoint = endPoint
-                caGradientLayer.frame = self.bounds
+        caGradientLayer.startPoint = startPoint
+        caGradientLayer.endPoint = endPoint
+        caGradientLayer.frame = self.bounds
         self.layer.insertSublayer(caGradientLayer, at: 0)
         self.layer.masksToBounds = true
     }
@@ -202,7 +202,7 @@ extension UIStackView {
     func removeAllArrangedSubviews() -> [UIView] {
         return arrangedSubviews.reduce([UIView]()) { $0 + [removeArrangedSubViewProperly($1)] }
     }
-
+    
     func removeArrangedSubViewProperly(_ view: UIView) -> UIView {
         removeArrangedSubview(view)
         NSLayoutConstraint.deactivate(view.constraints)
@@ -230,6 +230,17 @@ extension UIColor {
     static func custom(_ name: ColorName) -> UIColor {
         StyleManager.colorByName(name)
     }
+    
+    static func random() -> UIColor {
+        // 使用arc4random_uniform来生成一个0到255之间的随机无符号整数
+        // 然后将其除以255.0来得到一个CGFloat，其范围在0到1之间
+        let red = CGFloat(arc4random_uniform(256)) / 255.0
+        let green = CGFloat(arc4random_uniform(256)) / 255.0
+        let blue = CGFloat(arc4random_uniform(256)) / 255.0
+        
+        // 返回随机颜色
+        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+    }
 }
 
 extension UIView {
@@ -241,5 +252,89 @@ extension UIView {
         let tapGesture = UITapGestureRecognizer(target: target, action: action)
         self.isUserInteractionEnabled = true
         self.addGestureRecognizer(tapGesture)
+    }
+    
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+        }
+    }
+    
+    @IBInspectable
+    var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+    
+    @IBInspectable
+    var borderColor: UIColor? {
+        get {
+            if let color = layer.borderColor {
+                return UIColor(cgColor: color)
+            }
+            return nil
+        }
+        set {
+            if let color = newValue {
+                layer.borderColor = color.cgColor
+            } else {
+                layer.borderColor = nil
+            }
+        }
+    }
+    
+    @IBInspectable
+    var shadowRadius: CGFloat {
+        get {
+            return layer.shadowRadius
+        }
+        set {
+            layer.shadowRadius = newValue
+        }
+    }
+    
+    @IBInspectable
+    var shadowOpacity: Float {
+        get {
+            return layer.shadowOpacity
+        }
+        set {
+            layer.shadowOpacity = newValue
+        }
+    }
+    
+    @IBInspectable
+    var shadowOffset: CGSize {
+        get {
+            return layer.shadowOffset
+        }
+        set {
+            layer.shadowOffset = newValue
+        }
+    }
+    
+    @IBInspectable
+    var shadowColor: UIColor? {
+        get {
+            if let color = layer.shadowColor {
+                return UIColor(cgColor: color)
+            }
+            return nil
+        }
+        set {
+            if let color = newValue {
+                layer.shadowColor = color.cgColor
+            } else {
+                layer.shadowColor = nil
+            }
+        }
     }
 }
